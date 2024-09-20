@@ -1,0 +1,241 @@
+/*General styles */
+* {
+    box-sizing: border-box;
+}
+:root {
+    --content-height: 0px;
+}
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: none;
+}
+/* Header styles */
+header {
+    display: flex;
+    background-color: rgb(58, 169, 58);
+    color: white;
+    position: sticky;
+    top: 0;
+    flex-flow: row;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer {
+    background-color: rgb(58, 169, 58);
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    padding-left: 1rem;
+}
+
+nav li {
+    padding-right: 2rem;
+    font-size: 1.1rem;
+} 
+
+nav ul {
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+}
+
+nav a {
+    color: white;
+}
+
+nav a:hover, 
+nav a:active{
+    border: 4px solid black;
+}
+/*main styles*/
+main {
+    /*
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    */
+}
+
+main a {
+    
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+/*tee time page styles*/
+input[type="text"],
+input[type="email"], 
+input[type="datetime-local"],
+textarea{
+  border: 2px solid green;
+  margin-bottom: 0.5em;
+  width: 100%;
+  padding: 0.6em;
+  
+}
+button {
+    background-color: green;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px; 
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 75px;
+    align-items: center;
+    padding-left: 20rem;
+}
+
+.container-author {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 75px;
+    align-items: center;
+    padding-left: 20rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.container-teetime {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 75px;
+    align-items: center;
+    padding-left: 20rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.container-contactus {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 75px;
+    align-items: center;
+    padding-left: 20rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.address {
+    font-weight: bold;
+}
+
+/*accordion styles*/
+
+.aboutdesigner {
+    background-color: green;
+    color: white;
+    font-weight: 500;
+    width: 100%;
+    font-size: 1.2rem;
+    position: relative;
+    transition: opacity 0.5s ease-out;
+}
+
+.aboutinfo {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+.aboutinfo.open {
+    height: var(--content-height);
+    overflow: auto;
+}
+
+.aboutdesigner::after {
+    content: '+';
+    position: absolute;
+    right: 1rem;
+    font-size: 1.2rem;
+}
+
+.aboutdesigner.open::after {
+    content: '-';
+    font-size: 1.5rem;
+    bottom: 0.08rem;
+}
+
+/*tooltip styles*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -40px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+      
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-style: solid;
+    border-color: green transparent transparent transparent;
+}
+      
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* dark mode */
+.darkmodebtn {
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px; 
+}
+
+.align-right {
+    padding-left: 8rem;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
